@@ -1,0 +1,28 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class KlassManager {
+	static KlassManager klassManager;
+	static Map<String, Klass> klasses = new HashMap<String, Klass>();
+
+	public static void addKlass(Klass klass) {
+		if(klasses.containsKey(klass.klassId))
+		klasses.put(klass.klassId, klass);
+	}
+
+	static KlassManager getInstance() {
+		if (klassManager == null) {
+			klassManager = new KlassManager();
+		}
+		return klassManager;
+	}
+
+	public static void registerStudentToKlass(Klass klass, String studentId) {
+		if (klassList.contains(klass)) {
+			klass.registerStudent(studentId);
+		}
+	}
+
+}

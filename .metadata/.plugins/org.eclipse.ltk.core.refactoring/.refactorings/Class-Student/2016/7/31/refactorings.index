@@ -1,0 +1,7 @@
+1469340427742	Rename field 'studentId'
+1469340451306	Rename field 'studentClass'
+1469340476774	Rename method 'isPresent'
+1469340494550	Rename local variable 'isRegist'
+1469340777029	Rename method 'add'
+1469343076361	Encapsulate field 'rollNumber'
+1469345057807	Rename method 'addKlass'

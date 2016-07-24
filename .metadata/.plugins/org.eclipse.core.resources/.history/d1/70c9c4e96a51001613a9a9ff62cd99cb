@@ -1,0 +1,23 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class StudentManager {
+
+	static StudentManager studentManager;
+		static Map<String, Student> students = new HashMap<String, Student>();
+
+	
+
+	public static void addStudent(Student student) {
+		studentList.add(student);		
+	}
+	
+	public static StudentManager getInstance(){
+		if(studentManager == null){
+			studentManager = new StudentManager();
+		}
+		return studentManager;
+	}
+}

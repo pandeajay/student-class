@@ -1,0 +1,13 @@
+
+public class QueryManager {
+
+	private static QueryManager queryManager;
+	
+	public static QueryManager getInstance() {
+		if (queryManager == null) {
+			queryManager = new QueryManager();
+		}
+		return queryManager;
+	}
+
+}

@@ -1,0 +1,21 @@
+
+public class StudentManager {
+
+	public StudentManager() {
+		// TODO Auto-generated constructor stub
+	}
+
+	
+
+	private static void addStudent() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	static KlassManager getInstance(){
+		if(klassManager == null){
+			klassManager = new KlassManager();
+		}
+		return klassManager;
+	}
+}

@@ -1,0 +1,36 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class KlassManager {
+	static KlassManager klassManager;
+	static Map<String, Klass> klasses = new HashMap<String, Klass>();
+
+	public static void addKlass(Klass klass) throws Exception {
+		if(klasses.containsKey(klass.getKlassId())){
+			throw new Exception("Klass " + klass.getKlassId() + " already exists");
+		}
+		klasses.put(klass.getKlassId(), klass);
+	}
+
+	static KlassManager getInstance() {
+		if (klassManager == null) {
+			klassManager = new KlassManager();
+		}
+		return klassManager;
+	}
+
+	public static void registerStudentToKlass(Klass klass, String studentId) throws Exception {
+		if (klasses.containsKey(klass.getKlassId())) {
+			StudentManager.getInstance();
+			if(StudentManager.isStudentRegistered(studentId)){
+				throw new Exception("Student " + studentId +  " is already registerd");
+			}
+			klass.registerStudent(studentId);
+		}else{
+			throw new Exception("Klass " + klass.getKlassId() + " was not found");
+		}
+	}
+
+}

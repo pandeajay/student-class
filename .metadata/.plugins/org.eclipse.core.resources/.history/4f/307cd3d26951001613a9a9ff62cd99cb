@@ -1,0 +1,30 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class KlassManager {
+	static KlassManager klassManager;	
+	static List<Klass> klassList = new ArrayList<Klass>();
+	
+
+	public static void addKlass(Klass klass) {
+		klassList.add(klass);		
+	}
+
+
+	
+	static KlassManager getInstance(){
+		if(klassManager == null){
+			klassManager = new KlassManager();
+		}
+		return klassManager;
+	}
+	
+	
+	public static void registerStudentToKlass(Klass klass, String studentId) {
+		if(klassList.contains(klass)}{
+			klass.registerStudent(studentId);
+		}
+	}
+
+	
+}

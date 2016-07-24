@@ -1,0 +1,25 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class Klass {
+	String klassId;
+	List<String> studentList;
+
+	public Klass() {
+		// TODO Auto-generated constructor stub
+		klassId = new String();
+		studentList = new ArrayList<String>();
+	}
+	
+	public int getIndex(){
+		return Integer.parseInt(klassId.substring(klassId.lastIndexOf('s'),
+				klassId.length() -1));
+	}
+	public String getKlassId(){
+		return klassId;
+	}
+	
+	public void registerStudent(){
+		
+	}
+}

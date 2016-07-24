@@ -1,0 +1,14 @@
+
+public class Klass {
+	String klassId;
+
+	public Klass() {
+		// TODO Auto-generated constructor stub
+		klassId = new String();
+	}
+	public int getIndex(){
+		return Integer.parseInt(klassId.substring(klassId.lastIndexOf('s'),klassId.length() -1))));
+	}
+	
+
+}

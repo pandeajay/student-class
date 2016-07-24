@@ -1,0 +1,43 @@
+import java.util.BitSet;
+import java.util.List;
+
+public class Student {
+
+	BitSet registredKlasses;
+	String rollNumber;
+
+	public Student() {
+		registredKlasses = new BitSet();
+		registredKlasses.clear();
+		rollNumber = new String();
+	}
+	public Student(String rollNumber) {
+		registredKlasses = new BitSet();
+		registredKlasses.clear();
+		this.rollNumber = rollNumber;
+	}
+	
+	public Student(String rollNumber, List<String> klassIds) {
+		registredKlasses = new BitSet();
+		
+		registredKlasses.clear();
+		this.rollNumber = rollNumber;
+	}
+	
+
+	public void add(Klass klass) {
+		registredKlasses.set(klass.getIndex() - 1);
+	}
+
+	public boolean isRegisteredForKlasses(List<Klass> klassList) {
+		boolean isRegistered = true;
+		for (Klass klass : klassList) {
+			if (!registredKlasses.get(klass.getIndex())) {
+				isRegistered = false;
+				break;
+			}
+		}
+		return isRegistered;
+	}
+
+}

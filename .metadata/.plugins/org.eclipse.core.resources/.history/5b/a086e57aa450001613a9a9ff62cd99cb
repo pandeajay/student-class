@@ -1,0 +1,13 @@
+
+public class KlassManager {
+	static KlassManager klassManager;
+
+	public KlassManager() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	private static void addKlass() {
+		// TODO Auto-generated method stub
+		
+	}
+}

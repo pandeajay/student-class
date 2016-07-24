@@ -1,0 +1,26 @@
+import java.util.BitSet;
+import java.util.List;
+
+public class Student {
+	// TODO Auto-generated constructor stub
+	BitSet studentClass;
+	String studentId;
+
+	public Student() {
+		studentClass = new BitSet();
+		studentClass.clear();
+		studentId = new String();
+
+	}
+
+	public void add(Klass klass) {
+		studentClass.set(klass.getIndex() -1 );
+
+	}
+	public boolean isPresent(List<Klass> klassList){
+		boolean present = false;
+		return false;
+		
+	}
+
+}

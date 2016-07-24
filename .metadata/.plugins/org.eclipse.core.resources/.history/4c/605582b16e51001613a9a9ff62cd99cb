@@ -1,0 +1,26 @@
+import java.util.BitSet;
+
+public class Main {
+	KlassManager klassManager = KlassManager.getInstance();
+	StudentManager studentManager = StudentManager.getInstance();
+
+	public Main() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		addKlass();
+	
+
+	}
+
+	private static void addKlass() {
+		
+		
+	}
+	private static void addStudent() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

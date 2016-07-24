@@ -1,0 +1,11 @@
+
+public class Klass {
+	String klassId;
+
+	public Klass() {
+		// TODO Auto-generated constructor stub
+		klassId = new String();
+	}
+	
+
+}

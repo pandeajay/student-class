@@ -1,0 +1,21 @@
+import java.util.ArrayList;
+
+public class StudentManager {
+
+	static StudentManager studentManager;
+	List<Student> studentList = new ArrayList<Student>();
+
+	
+
+	private static void addStudent() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	static StudentManager getInstance(){
+		if(studentManager == null){
+			studentManager = new StudentManager();
+		}
+		return studentManager;
+	}
+}

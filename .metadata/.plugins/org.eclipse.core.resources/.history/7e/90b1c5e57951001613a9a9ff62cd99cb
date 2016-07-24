@@ -1,0 +1,22 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class QueryManager {
+
+	private static QueryManager queryManager;
+	
+	public static QueryManager getInstance() {
+		if (queryManager == null) {
+			queryManager = new QueryManager();
+		}
+		return queryManager;
+	}
+
+	
+	private List<String> findCommonStudentToKlass(List<String> klasses){
+		List<String> commonStudent = new ArrayList<String>();
+		List<Student> allStudent = 
+		return klasses;
+		
+	}
+}

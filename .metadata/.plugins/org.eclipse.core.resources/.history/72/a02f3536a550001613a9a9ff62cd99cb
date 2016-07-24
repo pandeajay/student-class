@@ -1,0 +1,29 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class KlassManager {
+	static KlassManager klassManager;
+	
+	static List<Klass> klassList = new ArrayList<Klass>();
+
+	
+
+	private static void addStudent(Klass klass) {
+		klassList.add(klass);		
+	}
+
+	
+	private static void addKlass() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	static KlassManager getInstance(){
+		if(klassManager == null){
+			klassManager = new KlassManager();
+		}
+		return klassManager;
+	}
+	
+	
+}

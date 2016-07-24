@@ -1,0 +1,17 @@
+import java.util.BitSet;
+
+public class Student {
+	// TODO Auto-generated constructor stub
+	BitSet studentClass;
+	String studentId;
+
+	public Student() {
+		studentClass = new BitSet();
+
+	}
+
+	public void add(String classId) {
+
+	}
+
+}

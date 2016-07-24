@@ -1,0 +1,8 @@
+
+public class QueryManager {
+
+	public QueryManager() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

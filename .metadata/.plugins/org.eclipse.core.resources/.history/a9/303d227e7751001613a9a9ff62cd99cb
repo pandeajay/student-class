@@ -1,0 +1,49 @@
+import java.util.ArrayList;
+import java.util.BitSet;
+
+public class Main {
+	static KlassManager klassManager = KlassManager.getInstance();
+	static StudentManager studentManager = StudentManager.getInstance();
+
+	public Main() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		addKlasses();
+		addStudents();
+		klassManager.registerStudentToKlass("C1", new ArrayList(){"S1", "S2", "S4', "S5"});
+	
+
+	}
+
+	private static void addKlasses() {
+		for(int i = 0 ; i < 5; i++){
+			Klass klass = new Klass("C" + i);
+			try {
+				klassManager.addKlass(klass);
+				System.out.println("Class "+ klass.getKlassId() + " added successfully");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
+		
+	}
+	private static void addStudents() {
+		for(int i = 0; i < 5; i++){
+			Student student = new Student("S" + i);
+			try {
+				studentManager.addStudent(student);
+				System.out.println("Studdent " + student.getRollNumber() + " added sucessfully");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
+		
+	}
+
+}

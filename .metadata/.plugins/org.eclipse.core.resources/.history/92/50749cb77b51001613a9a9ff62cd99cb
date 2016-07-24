@@ -1,0 +1,38 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class QueryManager {
+
+	private static QueryManager queryManager;
+	StudentManager studentManager = StudentManager.getInstance();
+	KlassManager klassManager = KlassManager.getInstance();
+	
+	public static QueryManager getInstance() {
+		if (queryManager == null) {
+			queryManager = new QueryManager();
+		}
+		return queryManager;
+	}
+
+	
+	public List<String> findCommonStudentToKlass(List<String> klasses){
+		List<String> commonStudent = new ArrayList<String>();
+		List<Student> allStudents = studentManager.getAllStudent();
+		for(Student student : allStudents){
+			if(student.isRegisteredForKlasses(klasses)){
+				commonStudent.add(student.getRollNumber());
+			}
+		}
+		return commonStudent;
+		
+	}
+	
+	public List<String> findPairs(List<String> collection){
+		List<String> pairs = new ArrayList<String>();
+		for(String record : collection){
+			
+		}
+		return pairs;
+		
+	}
+}
